@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -n ${USERNAME} -a -n ${PASSWORD} ]; then
+if [ -n "${USERNAME}" -a -n "${PASSWORD}" ]; then
     supertuxkart --init-user --login=${USERNAME} --password=${PASSWORD}
 fi
 
