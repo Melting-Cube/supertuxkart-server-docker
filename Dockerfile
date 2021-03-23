@@ -22,7 +22,7 @@ RUN apt-get update && \
 
 # Get code and assets
 RUN git clone --branch ${VERSION} --depth=1 https://github.com/supertuxkart/stk-code.git
-RUN svn checkout https://svn.code.sf.net/p/supertuxkart/code/stk-assets-release/${VERSION}/ stk-assets
+RUN svn checkout https://svn.code.sf.net/p/supertuxkart/code/stk-assets stk-assets
 
 # Build server
 RUN mkdir stk-code/cmake_build && \
