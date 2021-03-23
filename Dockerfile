@@ -6,7 +6,7 @@ FROM debian:10-slim AS build
 WORKDIR /build
 
 # Set stk version that should be built
-ENV VERSION=1.1
+ENV VERSION=1.2
 
 # Install build dependencies
 RUN apt-get update && \
