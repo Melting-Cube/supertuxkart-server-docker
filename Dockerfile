@@ -40,7 +40,7 @@ WORKDIR /app
 
 # Install libcurl dependency
 RUN apt-get update && \
-    apt-get install -y libcurl4-openssl-dev curl && \
+    apt-get install -y libcurl4-openssl-dev curl unzip && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy artifacts from build stage
