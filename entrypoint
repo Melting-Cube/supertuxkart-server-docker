@@ -4,4 +4,8 @@ if [ -n "${USERNAME}" -a -n "${PASSWORD}" ]; then
     supertuxkart --init-user --login=${USERNAME} --password=${PASSWORD}
 fi
 
+if [ -n "$INSTALL_ADDONS" ]; then
+    /app/install-all-addons.sh
+fi
+
 exec supertuxkart --server-config=config.xml --no-graphics --lan-server="${SERVER_NAME:-'STK Server'}"

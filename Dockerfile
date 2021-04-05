@@ -47,6 +47,7 @@ RUN apt-get update && \
 COPY --from=build /usr/local/bin/supertuxkart /usr/local/bin
 COPY --from=build /usr/local/share/supertuxkart /usr/local/share/supertuxkart
 COPY ./entrypoint /app/entrypoint
+COPY ./install-all-addons.sh /app/install-all-addons.sh
 
 # Expose ports
 EXPOSE 2757

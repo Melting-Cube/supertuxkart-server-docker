@@ -22,7 +22,8 @@ $ docker run --name my-stk-server \
              -p 2757:2757 \
              -p 2759:2759 \
              -v $(pwd)/config.xml:/app/config.xml \
-             timoschwarzer/supertuxkart-server:1.1
+             # -e INSTALL_ADDONS=1 # Install all addons after starting
+             timoschwarzer/supertuxkart-server:1.2
 ```
 
 For hosting a public internet server (by setting `wan-server` to `true` in the config file) it is required to log in with your STK account. You can register a free account [here](https://online.supertuxkart.net/register.php). Pass your username and password to the container via environment variables.
@@ -35,5 +36,5 @@ $ docker run --name my-stk-server \
              -v $(pwd)/config.xml:/app/config.xml \
              -e USERNAME=myusername \
              -e PASSWORD=mypassword \
-             timoschwarzer/supertuxkart-server:1.1
+             timoschwarzer/supertuxkart-server:1.2
 ```
