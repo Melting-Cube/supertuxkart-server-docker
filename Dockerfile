@@ -46,8 +46,8 @@ RUN apt-get update && \
 # Copy artifacts from build stage
 COPY --from=build /usr/local/bin/supertuxkart /usr/local/bin
 COPY --from=build /usr/local/share/supertuxkart /usr/local/share/supertuxkart
-COPY ./entrypoint /app/entrypoint
-COPY ./install-all-addons.sh /app/install-all-addons.sh
+COPY ./entrypoint /stk/entrypoint
+COPY ./install-all-addons.sh /stk/install-all-addons.sh
 
 # Expose ports
 EXPOSE 2757
