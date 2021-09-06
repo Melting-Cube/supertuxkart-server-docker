@@ -9,7 +9,7 @@ fi
 
 # install all addons
 if [ -n "$INSTALL_ADDONS" ]; then
-    /app/install-all-addons.sh
+    /stk/install-all-addons.sh
 fi
 
 # Start stk server in background
