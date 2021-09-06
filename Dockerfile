@@ -36,7 +36,7 @@ RUN mkdir stk-code/cmake_build && \
 # -----------
 
 FROM debian:10-slim
-WORKDIR /app
+WORKDIR /stk
 
 # Install libcurl dependency
 RUN apt-get update && \
@@ -53,4 +53,4 @@ COPY ./install-all-addons.sh /app/install-all-addons.sh
 EXPOSE 2757
 EXPOSE 2759
 
-ENTRYPOINT ["/app/entrypoint"]
+ENTRYPOINT ["/stk/entrypoint"]
