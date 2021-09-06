@@ -2,7 +2,7 @@ version: '3'
 
 services:
   stk:
-    image: timoschwarzer/supertuxkart-server
+    image: meltingcube/supertuxkart-server
     ports:
       - 2759:2759
     volumes:
