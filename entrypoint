@@ -8,9 +8,4 @@ if [ -n "$INSTALL_ADDONS" ]; then
     /app/install-all-addons.sh
 fi
 
-if [ -n "${USERNAME}" ]
-then
-    exec supertuxkart --server-config=config.xml --no-graphics --lan-server="${SERVER_NAME:-'STK Server'}"
-else
-    exec supertuxkart --server-config=config.xml --no-graphics
-fi
+exec supertuxkart --server-config=config.xml --no-graphics
