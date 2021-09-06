@@ -6,4 +6,4 @@ services:
     ports:
       - 2759:2759
     volumes:
-      - ./config.xml:/app/config.xml
+      - ./server_config.xml:/stk/server_config.xml
