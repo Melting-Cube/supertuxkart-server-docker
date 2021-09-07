@@ -19,7 +19,7 @@ supertuxkart --server-config=server_config.xml --no-graphic &
 if [[ -n ${AI_KARTS} ]]
 then
     SERVER_PASSWORD=`cat server_config.xml | grep private-server-password | awk -F '"' '{print $2}'`
-    supertuxkart --connect-now=127.0.0.1:2759 --server-password=$SERVER_PASSWORD --network-ai=${AI_KARTS} &
+    supertuxkart --connect-now=127.0.0.1:2759 --disable-polling --server-password=$SERVER_PASSWORD --network-ai=${AI_KARTS} &
 fi
 
 # Bring server process back into foreground
